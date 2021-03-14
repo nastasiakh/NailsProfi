@@ -234,6 +234,11 @@ header nav ul li:last-child:after{
 nav ul li a:hover {
 	color: #ea3565;
 }
+.home{
+	background-image: url(../images/home.png);
+	background-repeat: no-repeat;
+	background-position: 5px 11px;
+}
 .sub-menu{
 	display: none;
 }
@@ -326,6 +331,7 @@ nav ul li a:hover {
 	width: 9px;
 	margin: 5px;
 	background-color: white;
+	box-shadow: #494e58;
 }
 .active{
 	background-color: #ea3565 !important;
@@ -386,14 +392,13 @@ nav ul li a:hover {
 }
 
 
-
 /*About section*/
 .about{
-	color: black;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 h2{
+	color: black;
 	font-size: 32px;
 	text-align: center;
 	padding-bottom: 15px;
@@ -401,13 +406,14 @@ h2{
 }
 .about p{
 	margin-top: 15px;
+	color: dimgrey;
 }
 
 /*News*/
 .news{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	color: black;
+	color: dimgrey;
 	font-size:0 ;
 }
 .post-preview{
@@ -436,9 +442,9 @@ h2{
 	content: "";
 	position: absolute;
 	bottom: 0;
-	left: -16px;
+	right: -16px;
 }
-.post-preview:first-child:after{
+.post-preview:last-child:after{
 	content: none;
 }
 
