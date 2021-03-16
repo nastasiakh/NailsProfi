@@ -124,6 +124,9 @@ span{
 .grey{
 	color: grey;
 }
+.callback{
+	position: relative;
+}
 .callback:after{
 	display: block;
 	height: 1px;
@@ -131,34 +134,49 @@ span{
 	content: "";
 	left: 0;
 	right: 0;
-	top: 0;
+	bottom: 0;
+	position: absolute;
 }
-/*.callback:after{*/
-/*	 display: block;*/
-/*	 height: 1px;*/
-/*	 background: repeating-linear-gradient(to right, black, black 1px, transparent 1px, transparent 3px);*/
-/*	 content: "";*/
-/*	 left: 0;*/
-/*	 right: 0;*/
-/*	 top: 2px;*/
-/* }*/
+.callback:before{
+	display: block;
+	height: 1px;
+	background: repeating-linear-gradient(to right, black, black 1px, transparent 1px, transparent 3px);
+	left: 0;
+	content: "";
+	right: 0;
+	bottom: -1px;
+	position: absolute;
+ }
 .online{
 	text-align: right;
 }
 .appointment{
-	margin-bottom: 20px;
 	text-align: right;
-	padding-right: 23px;
+	margin: 10px 28px;
 	position: relative;
 }
 .appointment:after{
 	display: block;
 	height: 1px;
-	width: 114px;
 	background: repeating-linear-gradient(to right, #ea3565, #ea3565 1px, transparent 1px, transparent 3px);
 	content: "";
+	left: 0;
+	right: 0;
+	bottom: 0;
 	position: absolute;
-	right: 21px;
+}
+.appointment:before{
+	display: block;
+	height: 1px;
+	background: repeating-linear-gradient(to right, black, black 1px, transparent 1px, transparent 3px);
+	left: 0;
+	content: "";
+	right: 0;
+	bottom: -1px;
+	position: absolute;
+}
+.soc_media{
+	margin-top: 25px;
 }
 .soc_media ul{
 	font-size: 0;
@@ -331,7 +349,7 @@ nav ul li a:hover {
 	width: 9px;
 	margin: 5px;
 	background-color: white;
-	box-shadow: #494e58;
+	box-shadow: 0 0 3px 0 #494e58;
 }
 .active{
 	background-color: #ea3565 !important;
@@ -343,54 +361,95 @@ nav ul li a:hover {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.courses div>div>span{
-	display: block;
-	position: absolute;
-	margin: 0 35px;
-	top: 35px;
-	font-size: 19px;
-}
-.courses div>div.pink {
-	position: relative;
-	z-index: 1;
+.firstbg, .secondbg, .thirdbg{
 	display: inline-block;
-	margin: 0 10px;
-}
-.mask {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	opacity: 0.7;
-}
-.firstbg{
-	background: #bb183e;
-}
-.courses .pink:hover{
-	background: #494e58;
-}
-.secondbg{
-	background: #ba697e;
+	width: 320px;
+	height: 149px;
+	margin-right: 35px;
+	vertical-align: middle;
+	position: relative;
 }
 .thirdbg{
-	background: #ec5c83;
+	margin-right: 0;
 }
-
-.courses div>div:after{
+.firstbg{
+	background-image: url("../images/course1.png");
+	width: 320px;
+	height: 149px;
+	position: relative;
+	content: "";
+	background-color: #ea3565;
+	opacity: 0.7;
+}
+.courses-text{
+	font-size: 20px;
+	font-weight: lighter;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: 1px dotted white;
+	z-index: 15;
+	padding: 15px 21px;
+	right: 10px;
+	bottom: 10px;
+	background: transparent;
+}
+.firstbg:after {
 	content: "";
 	position: absolute;
-	top: 15px;
-	left: 15px;
-	right: 15px;
-	bottom: 15px;
-	border: white dotted 1px;
+	background: #6f0b26d1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: 0.5s;
 }
-.courses div>div>img:hover div{
-	background: #67a53b;
-	z-index:5;
+.secondbg{
+	background-image: url("../images/course2.png");
+	width: 320px;
+	height: 149px;
+	position: relative;
+	content: "";
+	background-color: #ea3565;
+	opacity: 0.7;
+}
+.secondbg:after{
+	content: "";
+	position: absolute;
+	background: #d41e4f94;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: 0.5s;
+}
+.thirdbg{
+	background-image: url("../images/course1.png");
+	width: 320px;
+	height: 149px;
+	position: relative;
+	content: "";
+	background-color: #ea3565;
+	opacity: 0.7;
+}
+.thirdbg:after{
+	content: "";
+	position: absolute;
+	background: #ff002fad;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: 0.5s;
 }
 
+.firstbg:hover:after, .secondbg:hover:after, .thirdbg:hover:after {
+	background: #000000cc;
+	cursor: pointer;
+}
+.courses-text:hover{
+	cursor: pointer;
+}
 
 /*About section*/
 .about{
