@@ -101,6 +101,7 @@ a:visited{
 span{
 	color: white;
 	font-size: 16px;
+	text-shadow: 1px 1px 2px black;
 }
 .logo-name{
 	display: block;
@@ -284,6 +285,52 @@ nav ul li a:hover {
 .sub-menu a:hover{
 	background-color: #483244;
 }
+.sub-menu li:before{
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: repeating-linear-gradient(to right,#0000, #0000 1px, transparent 1px, transparent 3px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.sub-menu li:first-child:after{
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: repeating-linear-gradient(to right,#0000, #0000 1px, transparent 1px, transparent 3px);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.sub-menu li:after{
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: repeating-linear-gradient(to right,#0000, #0000 1px, transparent 1px, transparent 3px);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.sub-menu li:last-child:after{
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: repeating-linear-gradient(to right,#0000, #0000 1px, transparent 1px, transparent 3px);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.sub-menu li:hover:before,
+.sub-menu li:hover:after,
+.sub-menu li:first-child:hover:after,
+.sub-menu li:last-child:hover:after{
+	background: repeating-linear-gradient(to right,#fff, #fff 1px, transparent 1px, transparent 3px);
+}
 
 #e-shop{
 	background-color: #483244;
@@ -377,7 +424,6 @@ nav ul li a:hover {
 	width: 320px;
 	height: 149px;
 	position: relative;
-	content: "";
 	background-color: #ea3565;
 	opacity: 0.7;
 }
@@ -409,7 +455,6 @@ nav ul li a:hover {
 	width: 320px;
 	height: 149px;
 	position: relative;
-	content: "";
 	background-color: #ea3565;
 	opacity: 0.7;
 }
@@ -428,7 +473,6 @@ nav ul li a:hover {
 	width: 320px;
 	height: 149px;
 	position: relative;
-	content: "";
 	background-color: #ea3565;
 	opacity: 0.7;
 }
@@ -488,10 +532,13 @@ h2{
 .post-preview a,
 .post-preview span{
 	color: #a4a4a5;
+
+
 }
 .post-preview a{
 	display: block;
 	text-align: right;
+	text-decoration: underline;
 }
 .post-preview:after{
 	display: block;
