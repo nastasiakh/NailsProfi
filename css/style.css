@@ -230,11 +230,11 @@ nav ul {
 nav ul li{
 	font-size: 16px;
 	display: inline-block;
-	margin: 15px 0;
 	position: relative;
 }
 nav ul li a{
 	padding: 10px 15px;
+	display: block;
 }
 header nav>ul>li:after{
 	display: block;
@@ -243,7 +243,7 @@ header nav>ul>li:after{
 	background: repeating-linear-gradient(#ea3565, #ea3565 1px, transparent 1px, transparent 3px);
 	content: "";
 	position: absolute;
-	top: -11px;
+	top: 4px;
 	left: 0;
 }
 header nav ul li:first-child:after,
@@ -256,7 +256,7 @@ nav ul li a:hover {
 .home{
 	background-image: url(../images/home.png);
 	background-repeat: no-repeat;
-	background-position: 5px 11px;
+	background-position: 6px 4px;
 }
 .sub-menu{
 	display: none;
@@ -277,7 +277,7 @@ nav ul li a:hover {
 	width: 145px;
 	text-decoration:none;
 	position: absolute;
-	top: 31px;
+	top: 36px;
 	left: 0;
 	z-index: 10;
 	background-color: #ea3565;
@@ -532,8 +532,6 @@ h2{
 .post-preview a,
 .post-preview span{
 	color: #a4a4a5;
-
-
 }
 .post-preview a{
 	display: block;
@@ -553,6 +551,9 @@ h2{
 .post-preview:last-child:after{
 	content: none;
 }
+.date{
+	text-shadow: none;
+}
 
 /*Footer*/
 footer{
@@ -569,7 +570,7 @@ footer nav ul li:before {
 	background: repeating-linear-gradient(#ea3565, #ea3565 1px, transparent 1px, transparent 3px);
 	content: "";
 	position: absolute;
-	top: -9px;
+	top: 0px;
 	left: 0;
 }
 footer nav ul li:last-child:after{
